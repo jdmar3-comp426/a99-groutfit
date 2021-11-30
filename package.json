@@ -1,0 +1,23 @@
+{
+  "name": "a02-ayanamonr",
+  "version": "1.0.0",
+  "description": "an assignment for comp 426",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdmar3-comp426/a02-ayanamonr.git"
+  },
+  "author": "Ayana Monroe",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jdmar3-comp426/a02-ayanamonr/issues"
+  },
+  "homepage": "https://github.com/jdmar3-comp426/a02-ayanamonr#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.7",
+    "bulma": "^0.9.3"
+  }
+}
