@@ -25,10 +25,10 @@
 <section class="section has-background-white">
     <section class="section">
         <div class="container">
-            <div class="columns  is-vcentered"">
+            <div class="columns  is-vcentered">
                 <div class="column">
                     <h1 class="title">Login</h1>
-                    <form>
+                    <form action="nextpage.php" method="POST">
                         <div class="field">
                             <label class="label">Username</label>
                             <div class="control">
@@ -41,17 +41,10 @@
                                 <input class="input" type="password" placeholder="password123" name="password">
                             </div>
                         </div>
+                        
                         <div class="field">
                             <div class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="remember">
-                                    Remember login?
-                                </label>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                                <button class="button is-dark" type="submit">Submit</button>
+                                <input onClick="window.location.href='index.html';" class="button is-dark" value="Submit">
                             </div>
                         </div>
                     </form>
@@ -60,4 +53,5 @@
         </section>
         </body>
         </html>
+
 </section>
