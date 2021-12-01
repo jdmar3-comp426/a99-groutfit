@@ -31,7 +31,8 @@
                     <h3 class="subtitle"> Time </h3>
                     <!--<h5 class="subtitle has-text-grey">Maybe the time goes here in red</h5>-->
                     <p>
-		    	10
+                    <div class="clock" id="clock"></div>
+
 		    </p>
             <hr>
             <h3 class="subtitle">Accuracy</h3>
@@ -51,87 +52,15 @@
                     <h1 class="title">Type</h1>
                     <!-- <h5 class="subtitle has-text-grey">what side information would go under this block? I say none</h5> -->
                     <p>
-		    	This is the area for the actual typing to occur, not entirely sure how to make it its own thing but we will figure it out.
-		    </p>
+		    	<!-- This is the area for the actual typing to occur, not entirely sure how to make it its own thing but we will figure it out. -->
+                        <input class="typing" placeholder="Begin typing when ready." onkeydown="timer(1)">
+                        <p id="time"></p>
+		            </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="section">
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <h1 class="title">Login</h1>
-                <form>
-                    <div class="field">
-                        <label class="label">Username</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Cookie Monster" name="username">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Password</label>
-                        <div class="control">
-                            <input class="input" type="password" placeholder="password123" name="password">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <label class="checkbox">
-                                <input type="checkbox" name="remember">
-                                Remember login?
-                            </label>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <button class="button is-dark" type="submit">Submit</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="column">
-                <h1 class="title">Signup</h1>
-                <form>
-                    <div class="field">
-                        <label class="label">Username</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Cookie Monster 2.0" name="username">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Password</label>
-                        <div class="control">
-                            <input class="input" type="password" placeholder="password12345">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Repeat Password</label>
-                        <div class="control">
-                            <input class="input" type="password" placeholder="password12345" name="password">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Account type</label>
-                        <div class="control">
-                            <div class="select">
-                                <select name="accountType">
-                                    <option>Student</option>
-                                    <option>Teacher</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <button class="button is-dark" type="submit">Submit</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+
 </body>
 </html>
