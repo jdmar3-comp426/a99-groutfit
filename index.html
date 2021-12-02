@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,60 +8,139 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
     <title>a99-groutfit</title>
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-<section class="hero is-grey">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title">
-                426 Typing Test
-            </h1>
-            <h2 class="subtitle">
-                Improve Your Typing Skills
-            </h2>
-        </div>
-    </div>
-</section>
-
-
-<section class="section has-background-white">
-    <div class="container">
-        <div class="content">
-            <div class="columns">
-                <div class="column">
-                    <h3 class="subtitle"> Time </h3>
-                    <!--<h5 class="subtitle has-text-grey">Maybe the time goes here in red</h5>-->
-                    <p>
-                    <div class="clock" id="clock"></div>
-
-		    </p>
-            <hr>
-            <h3 class="subtitle">Accuracy</h3>
-            <!-- <h5 class="subtitle has-text-grey">Maybe the accuracy goes here in red</h5> -->
-            <p>40
-    </p>
-    <hr>
-
-    <h3 class="">Errors</h3>
-                    <!-- <h2 class="subtitle has-text-grey"> Errors go in red here</h2> -->
-                    <p>
-		    	 2
-		    </p>
-        
+    <div>
+        <section class="hero is-grey">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">426 Typing Test</h1>
+                    <h2 class="subtitle">Improve Your Typing Skills</h2>
                 </div>
+            </div>
+        </section>
+
+
+        <div class="container">
+            <div class="columns is-centered is-narrow">
                 <div class="column">
-                    <h1 class="title">Type</h1>
-                    <!-- <h5 class="subtitle has-text-grey">what side information would go under this block? I say none</h5> -->
-                    <p>
-		    	<!-- This is the area for the actual typing to occur, not entirely sure how to make it its own thing but we will figure it out. -->
-                        <input class="typing" placeholder="Begin typing when ready." onkeydown="timer(1)">
-                        <p id="time"></p>
-		            </p>
+                    <h3 class="header_text"> Time </h3>
+                    <div id="timer"></div>
+                </div>
+
+                <div class="column">
+                    <div class="accuracy">
+                        <div class="header_text">% Accuracy</div>
+                        <div id="displayAcc"></div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="errors">
+                        <div class="header_text">Errors</div>
+                        <div class="curr_errors" id="countErr"></div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+        <section class="section is-medium">
+            <p>
+            <div class="container">
+                <h1 class="title">Begin typing.</h1>
+                <div class="display-quote" id="quoteDisplay"></div>
+                <textarea id="quoteInput" class="display-input" autofocus></textarea>
+            </div>
+            </p>
+        </section>
+
+        <div class="container">
+            
+
+
+            <div class="columns is-centered is-narrow">
+                <div class="column">
+                    <div class="header_text">Previous Time</div>                    
+                    <div id="displayT"></div>
+                </div>
+
+                <div class="column">
+                    <div class="accuracy">
+                        <div class="header_text">Previous % Accuracy</div>
+                        <div id="prevAcc"></div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="errors">
+                        <div class="header_text">Previous Errors</div>
+                        <div id="displayErr"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-</section>
+
+    <!-- <div>
+    <section class="section has-background-white">
+        <div class="container">
+            <div class="content">
+                <div class="columns">
+                      <div class="column">
+                         <h3 class="subtitle"> Time </h3>
+                        <div class="timer" id="timer"></div> 
+                        <hr>
+                        <h3 class="subtitle">Accuracy</h3>
+                        <p>
+                        <div class="accuracy">
+                            <div class="header_text">% Accuracy</div>
+                            <div class="curr_accuracy">100</div>
+                        </div>
+                        </p>
+                        <hr>
+
+                        <h3 class="">Errors</h3>
+
+                        <div class="errors">
+                            <div class="header_text">Errors</div>
+                            <div class="curr_errors">0</div>
+                        </div>  
+
+                    </div> 
+
+
+                     <div class="column">
+                        <h1 class="title">Type</h1>
+                         <h5 class="subtitle has-text-grey">what side information would go under this block? I say none</h5> 
+                        <p>
+                             This is the area for the actual typing to occur, not entirely sure how to make it its own thing but we will figure it out. 
+                        <div class="container">
+                            <div class="display-quote" id="quoteDisplay"></div>
+                            <textarea id="quoteInput" class="display-input" autofocus></textarea>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div> -->
+
+
 
 </body>
+
+<!-- 
+<body>
+  <div class="timer" id="timer"></div>
+  <div class="container">
+    <div class="display-quote" id="quoteDisplay"></div>
+    <textarea id="quoteInput" class="display-input" autofocus></textarea>
+  </div>
+</body> -->
+
 </html>
