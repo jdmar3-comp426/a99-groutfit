@@ -1,26 +1,28 @@
 {
-  "name": "a02-ayanamonr",
-  "version": "1.0.0",
-  "description": "an assignment for comp 426",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jdmar3-comp426/a02-ayanamonr.git"
-  },
-  "author": "Ayana Monroe",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/jdmar3-comp426/a02-ayanamonr/issues"
-  },
-  "homepage": "https://github.com/jdmar3-comp426/a02-ayanamonr#readme",
-  "dependencies": {
-    "better-sqlite3": "^7.4.5",
-    "browser-sync": "^2.27.7",
-    "bulma": "^0.9.3",
-    "express": "^4.17.1",
-    "md5": "^2.3.0"
-  }
+    "name": "a02-ayanamonr",
+    "version": "1.0.0",
+    "description": "an assignment for comp 426",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jdmar3-comp426/a02-ayanamonr.git"
+    },
+    "author": "Ayana Monroe",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/jdmar3-comp426/a02-ayanamonr/issues"
+    },
+    "homepage": "https://github.com/jdmar3-comp426/a02-ayanamonr#readme",
+    "dependencies": {
+        "axios": "^0.24.0",
+        "better-sqlite3": "^7.4.5",
+        "browser-sync": "^2.27.7",
+        "bulma": "^0.9.3",
+        "concurrently": "^6.4.0",
+        "express": "^4.17.1",
+        "md5": "^2.3.0"
+    }
 }

@@ -7,11 +7,12 @@ var db = require("./database.js")
 // Require md5 MODULE
 var md5 = require("md5")
 
+const path = require('path');
+const { userInfo } = require("os");
 // Make Express use its own built-in body parser
-//app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 //app.use(express.json());
 app.use(express.static('public'))
-
 
 // Set server port
 HTTP_PORT = 3000
@@ -19,9 +20,16 @@ HTTP_PORT = 3000
 app.listen(HTTP_PORT, () => {
     // console.log("Server running on port %PORT%".replace("%PORT%", HTTP_PORT))
 });
+
+app.post('/data', (req, res, next) => {
+    const stmt = db.prepare("INSERT INTO userinfo (user, pass) VALUES (?, ?)");
+    const info = stmt.run(req.body.username, md5(req.body.password))
+    res.redirect('/typingtest.html');
+});
+
 // READ (HTTP method GET) at root endpoint /app/
 app.get("/app/", (req, res, next) => {
-    res.sendFile('public/index.html', { root: '.' })
+    res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
 // Define other CRUD API endpoints using express.js and better-sqlite3
@@ -52,11 +60,26 @@ app.get("/app/user/:id", (req, res) => {
     res.status(200).json(object);
 });
 // UPDATE a single user (HTTP method PATCH) at endpoint /app/update/user/:id
-app.patch("/app/update/user/:id", (req, res) => {
-    const stmt = db.prepare("UPDATE userinfo SET user = COALESCE(?,user), pass = COALESCE(?,pass) WHERE id = ?");
-    const info = stmt.run(req.body.user, md5(req.body.pass), req.params.id)
-    res.status(200).send({ message: info.changes + " record updated: ID " + req.params.id + " (200)" });
+//app.patch("/app/update/user/:id", (req, res) => {
+//  const stmt = db.prepare("UPDATE userinfo SET user = COALESCE(?,user), pass = COALESCE(?,pass) WHERE id = ?");
+//const info = stmt.run(req.body.username, md5(req.body.password), req.params.id)
+//  res.status(200).send({ message: info.changes + " record updated: ID " + req.params.id + " (200)" });
+//});
+
+// UPDATE a single USERNAME (HTTP method POST) at endpoint /updateuser
+app.post("/updateuser", (req, res) => {
+    const stmt = db.prepare("UPDATE userinfo SET user = COALESCE(?,user) WHERE user = ?");
+    const info = stmt.run(req.body.newuser, req.body.username)
+    res.redirect('/typingtest.html');
 });
+
+// UPDATE a single USERNAME (HTTP method POST) at endpoint /updateuser
+app.post("/updatepass", (req, res) => {
+    const stmt = db.prepare("UPDATE userinfo SET pass = COALESCE(?,pass) WHERE pass = ?");
+    const info = stmt.run(req.body.newpassword, req.body.password)
+    res.redirect('/typingtest.html');
+});
+
 // DELETE a single user (HTTP method DELETE) at endpoint /app/delete/user/:id
 app.delete("/app/delete/user/:id", (req, res) => {
     const stmt = db.prepare("DELETE FROM userinfo WHERE id = ?");
