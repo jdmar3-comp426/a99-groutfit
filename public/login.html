@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
     <title>a99-groutfit</title>
+    <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
 <section class="hero is-grey">
@@ -32,22 +33,24 @@
                         <div class="field">
                             <label class="label">Username</label>
                             <div class="control">
-                                <input class="input" type="text" placeholder="Cookie Monster" name="username">
+                                <input class="input" id="username" type="text" placeholder="Cookie Monster" name="username">
                             </div>
                         </div>
                         <div class="field">
                             <label class="label">Password</label>
                             <div class="control">
-                                <input class="input" type="password" placeholder="password123" name="password">
+                                <input class="input" id="password" type="password" placeholder="password123" name="password">
                             </div>
                         </div>
                         
                         <div class="field">
                             <div class="control">
-                                <input onClick="window.location.href='typingtest.html';" class="button is-dark" value="Submit">
+                                <!-- <input onClick="window.location.href='typingtest.html';" class="button is-dark" value="Submit"> -->
+                                <input onClick="login()" class="button is-dark" value="Submit">
                             </div>
                         </div>
                     </form>
+                    <button id="navigate-to-signup" onClick="window.location.href='signup.html';"> New here? Create an Account. </button>
                 </div>
             </div>
         </section>

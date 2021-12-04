@@ -22,6 +22,7 @@
         "browser-sync": "^2.27.7",
         "bulma": "^0.9.3",
         "concurrently": "^6.4.0",
+        "crypto-js": "^4.1.1",
         "express": "^4.17.1",
         "md5": "^2.3.0"
     }

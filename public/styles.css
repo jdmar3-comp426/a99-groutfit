@@ -157,3 +157,19 @@ hr.vertical {
   border: 0;
  }
 
+
+
+ #navigate-to-signup{
+   background-color: black;
+   color: white;
+   height: 10vh;
+   text-align: center;
+   font-size: 15px;
+   position:fixed;
+   bottom: 20px;
+ }
+
+ #navigate-to-signup:hover{
+   cursor: pointer;
+ }
+
