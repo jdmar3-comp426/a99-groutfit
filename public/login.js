@@ -1,13 +1,9 @@
-//export var current_user;
 
-//const { MD5 } = require("crypto-js");
 
 async function login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    //var hash = MD5(password);
-    //console.log(`username: ${username} attempting to login`);
-    //console.log(hash);
+
   
     const response = await fetch("/app/users");
     var users = await response.json();
