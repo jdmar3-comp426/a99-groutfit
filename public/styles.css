@@ -167,9 +167,24 @@ hr.vertical {
    font-size: 15px;
    position:fixed;
    bottom: 20px;
+   border-radius: 10px;
  }
 
  #navigate-to-signup:hover{
+   cursor: pointer;
+ }
+
+ .loginbutton{
+   background-color: black;
+   color:white;
+   text-align: center;
+   width: 100px;
+   border-radius: 10px;
+   border: solid;
+   
+ }
+
+ .loginbutton:hover{
    cursor: pointer;
  }
 
